@@ -1,0 +1,596 @@
+/* ==================================
+   HERO
+================================== */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 100svh;
+  height: 100%;
+
+  overflow: visible;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  padding:
+    clamp(5rem, 8vw, 8rem)
+    clamp(1.5rem, 6vw, 7rem);
+
+  background: transparent;
+
+  color: #17212C;
+}
+
+
+/* ==================================
+   CONTENT
+================================== */
+
+.hero-content {
+  position: relative;
+
+  width: min(610px, 46vw);
+
+  margin-left: 45vw;
+  margin-right: auto;
+
+  z-index: 10;
+}
+
+
+.hero-eyebrow {
+  margin: 0 0 1.25rem;
+
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  font-weight: 500;
+
+  letter-spacing: 0.02em;
+}
+
+
+/* ==================================
+   TITLE
+================================== */
+
+.hero-title {
+  margin: 0;
+
+  font-size: clamp(3.5rem, 6vw, 6.5rem);
+  font-weight: 500;
+
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+  font-family: "Bricolage Grotesque", sans-serif;
+
+}
+
+
+.hero-title-mask {
+  display: block;
+
+  overflow: hidden;
+
+  padding-bottom: 0.08em;
+}
+
+
+.hero-title-line {
+  display: block;
+}
+
+
+/* ==================================
+   DESCRIPTION
+================================== */
+
+.hero-description {
+  max-width: 500px;
+
+  margin: 1.8rem 0 0;
+
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+
+  line-height: 1.65;
+
+  opacity: 0.72;
+}
+
+
+/* ==================================
+   ACTIONS
+================================== */
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 0.8rem;
+
+  margin-top: 2rem;
+}
+
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 118px;
+
+  padding: 0.82rem 1.45rem;
+
+  border: 1px solid #181e27;
+  border-radius: 999px;
+
+  color: #181e27;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition:
+    background 250ms ease,
+    color 250ms ease,
+    border-color 250ms ease,
+    transform 250ms ease;
+}
+
+
+.hero-button--primary {
+  background: #181e27;
+  color: #f4dfd8;
+}
+
+
+.hero-button:hover {
+  transform: translateY(-2px);
+}
+
+
+.hero-button--primary:hover {
+  background: #7a5563;
+  border-color: #7a5563;
+}
+
+
+.hero-button--secondary:hover {
+  background: rgba(24, 30, 39, 0.07);
+}
+
+
+/* ==================================
+   SCENE
+================================== */
+
+.hero-scene {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+}
+
+
+.hero-art {
+  position: absolute;
+
+  display: block;
+
+  height: auto;
+
+  user-select: none;
+  pointer-events: none;
+}
+
+
+/* ==================================
+   PALM
+================================== */
+
+.hero-palm {
+  left: -1.5vw;
+  bottom: -1vh;
+
+  height: 96vh;
+  width: auto;
+
+  z-index: 4;
+}
+
+
+/* ==================================
+   UMBRELLA
+================================== */
+
+.hero-umbrella {
+  left: 13vw;
+  bottom: -1vh;
+
+  width: clamp(250px, 25vw, 430px);
+
+  transform-origin: 50% 100%;
+
+  z-index: 5;
+}
+
+
+/* ==================================
+   BEACH BALL
+================================== */
+
+.hero-beachball {
+  left: clamp(300px, 31vw, 500px);
+
+  bottom: clamp(2rem, 7vh, 5rem);
+
+  width: clamp(72px, 7vw, 115px);
+
+  z-index: 6;
+}
+
+
+/* ==================================
+   SUN
+
+   IMPORTANT:
+   This is the sun's FINAL position.
+
+   IntroSequence uses transforms to place
+   it behind the lower-left sand initially
+   and animate it back to x: 0 / y: 0.
+================================== */
+
+/* ==================================
+   SUN
+================================== */
+
+.hero-sun {
+  position: absolute;
+
+  /*
+   * FINAL resting position.
+   *
+   * IntroSequence animates the sun
+   * here from behind the sand.
+   */
+  top: clamp(2.5rem, 6vh, 4.5rem);
+  right: clamp(3.5rem, 7vw, 8rem);
+
+  /*
+   * Bigger than before.
+   */
+  width: clamp(135px, 11vw, 180px);
+  aspect-ratio: 1;
+
+  z-index: 2;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  opacity: 0;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 216, 151, 0.48) 0%,
+      rgba(247, 179, 129, 0.27) 30%,
+      rgba(229, 145, 141, 0.13) 50%,
+      rgba(229, 145, 141, 0) 72%
+    );
+
+  transform-origin: center;
+
+  will-change: transform, opacity;
+
+  pointer-events: none;
+}
+
+
+.hero-sun-core {
+  width: 31%;
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+
+  background: #FFD28A;
+
+  box-shadow:
+    0 0 28px rgba(255, 197, 108, 0.42);
+}
+
+/* ==================================
+   SUN CORE
+================================== */
+
+
+
+/* ==================================
+   BIRD
+================================== */
+
+.hero-bird {
+  top: 26%;
+  left: 41%;
+
+  width: clamp(38px, 3.7vw, 60px);
+
+  opacity: 0.7;
+
+  z-index: 3;
+}
+
+
+/* ==================================
+   MEDIUM DESKTOP
+================================== */
+
+@media (max-width: 1200px) {
+  .hero-content {
+    width: min(560px, 48vw);
+
+    margin-left: 46vw;
+  }
+
+
+  .hero-title {
+    font-size: clamp(3.7rem, 6.4vw, 6rem);
+  }
+
+
+  .hero-palm {
+    height: 90vh;
+  }
+
+
+  .hero-umbrella {
+    left: 14vw;
+
+    width: clamp(240px, 27vw, 370px);
+  }
+
+
+  .hero-beachball {
+    left: 32vw;
+
+    width: clamp(85px, 9vw, 125px);
+  }
+}
+
+
+/* ==================================
+   TABLET
+================================== */
+
+@media (max-width: 900px) {
+  .hero {
+    align-items: flex-start;
+
+    padding:
+      6rem
+      2rem
+      15rem;
+  }
+
+
+  .hero-content {
+    width: min(580px, 68vw);
+
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+
+  .hero-title {
+    font-size: clamp(3.8rem, 9vw, 5.5rem);
+  }
+
+
+  .hero-palm {
+    left: -4vw;
+
+    height: 78vh;
+  }
+
+
+  .hero-umbrella {
+    left: 17vw;
+
+    width: clamp(220px, 32vw, 310px);
+  }
+
+
+  .hero-beachball {
+    left: 38vw;
+    bottom: 2rem;
+
+    width: 90px;
+  }
+
+
+  .hero-sun {
+    top: 2.5rem;
+    right: 2.5rem;
+
+    width: 100px;
+  }
+
+
+  .hero-bird {
+    left: 38%;
+
+    width: 45px;
+  }
+}
+
+
+/* ==================================
+   MOBILE
+================================== */
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 100svh;
+
+    align-items: flex-start;
+
+    padding:
+      4.75rem
+      1.25rem
+      14rem;
+  }
+
+
+  .hero-content {
+    width: 100%;
+
+    margin: 0;
+  }
+
+
+  .hero-eyebrow {
+    margin-bottom: 0.9rem;
+
+    font-size: 0.95rem;
+  }
+
+
+  .hero-title {
+    max-width: 95%;
+
+    font-size: clamp(3.2rem, 14vw, 4.8rem);
+
+    line-height: 0.92;
+  }
+
+
+  .hero-description {
+    max-width: 390px;
+
+    margin-top: 1.25rem;
+
+    font-size: 0.98rem;
+
+    line-height: 1.55;
+  }
+
+
+  .hero-actions {
+    margin-top: 1.4rem;
+  }
+
+
+  .hero-palm {
+    left: -3.5rem;
+    bottom: -0.5rem;
+
+    height: 56vh;
+  }
+
+
+  .hero-umbrella {
+    left: 5.5rem;
+    bottom: -0.75rem;
+
+    width: 190px;
+  }
+
+
+  .hero-beachball {
+    left: 14rem;
+    bottom: 1.75rem;
+
+    width: 72px;
+  }
+
+
+  .hero-sun {
+    top: 1.5rem;
+    right: 1.25rem;
+
+    width: 78px;
+  }
+
+
+  .hero-bird {
+    display: none;
+  }
+}
+
+
+/* ==================================
+   SMALL MOBILE
+================================== */
+
+@media (max-width: 430px) {
+  .hero {
+    padding:
+      4.25rem
+      1rem
+      12rem;
+  }
+
+
+  .hero-title {
+    font-size: clamp(3rem, 14vw, 4.15rem);
+  }
+
+
+  .hero-description {
+    max-width: 330px;
+  }
+
+
+  .hero-actions {
+    gap: 0.6rem;
+  }
+
+
+  .hero-palm {
+    left: -3.5rem;
+
+    height: 52vh;
+  }
+
+
+  .hero-umbrella {
+    left: 4.75rem;
+
+    width: 175px;
+  }
+
+
+  .hero-beachball {
+    left: 12.5rem;
+
+    width: 65px;
+  }
+
+
+  .hero-sun {
+    top: 1.25rem;
+    right: 1rem;
+
+    width: 70px;
+  }
+}
+
+
+/* ==================================
+   REDUCED MOTION
+================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero *,
+  .hero *::before,
+  .hero *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 780" role="img" aria-labelledby="title desc">
+<title id="title">SalesLabX Mediterranean Island</title>
+<desc id="desc">Flat-vector Mediterranean island with layered limestone terrain, connected stucco buildings, cypress and olive trees, shrubs, terraces, and a dock.</desc>
+<defs>
+  <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#A9BFC1"/>
+    <stop offset="100%" stop-color="#788E93"/>
+  </linearGradient>
+  <linearGradient id="rockMain" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#E8C9B7"/>
+    <stop offset="100%" stop-color="#C9A08D"/>
+  </linearGradient>
+  <linearGradient id="rockShadow" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#8E9195"/>
+    <stop offset="100%" stop-color="#687179"/>
+  </linearGradient>
+</defs>
+
+<g id="water">
+  <path d="M70 626 C210 604 348 605 468 616 C605 628 747 628 866 616 C1010 601 1136 607 1235 623
+           C1193 637 1120 643 1058 643 C1110 651 1131 661 1087 670
+           C952 691 781 687 656 678 C522 669 363 680 223 675
+           C151 672 100 662 67 647 C109 638 126 633 70 626Z" fill="url(#water)"/>
+  <path d="M132 646 C286 635 410 639 521 648 C656 659 787 655 896 644 C1008 632 1103 635 1180 646"
+        fill="none" stroke="#CFDDDE" stroke-width="8" stroke-linecap="round" opacity=".5"/>
+</g>
+
+<g id="terrain">
+  <path d="M145 610
+           C191 548 241 506 299 479
+           C354 453 419 446 484 455
+           C535 462 579 477 620 500
+           C659 468 709 448 765 448
+           C822 449 873 468 914 500
+           C957 486 1002 488 1042 507
+           C1085 527 1116 558 1140 610
+           Z" fill="url(#rockMain)"/>
+
+  <path d="M145 610 C177 566 211 529 259 500 C291 480 323 468 355 458
+           C333 490 314 530 303 568 C297 588 294 600 293 610Z"
+        fill="url(#rockShadow)"/>
+  <path d="M359 458 C413 447 467 453 516 471 C485 501 461 537 446 575 C440 590 437 602 435 610
+           H313 C323 563 338 508 359 458Z" fill="#EFD6C7"/>
+  <path d="M548 477 C593 459 639 458 682 469 C659 493 638 526 625 561 C619 579 615 598 613 610
+           H500 C510 566 526 516 548 477Z" fill="#CDA38F"/>
+  <path d="M722 456 C768 446 824 449 869 468 C842 497 821 531 809 564 C803 580 799 597 798 610
+           H666 C679 558 696 500 722 456Z" fill="#E7C7B7"/>
+  <path d="M917 501 C958 485 1006 491 1046 511 C1020 541 1003 575 995 610 H861
+           C875 570 892 532 917 501Z" fill="#B98F7D" opacity=".9"/>
+</g>
+
+<g id="rear-shrubs">
+  <g fill="#385F5A">
+    <circle cx="285" cy="485" r="35"/><circle cx="319" cy="469" r="31"/><circle cx="353" cy="476" r="34"/>
+    <circle cx="392" cy="462" r="31"/><circle cx="429" cy="469" r="34"/><circle cx="468" cy="477" r="30"/>
+    <circle cx="632" cy="468" r="29"/><circle cx="668" cy="455" r="27"/><circle cx="705" cy="462" r="31"/>
+    <circle cx="746" cy="468" r="28"/><circle cx="786" cy="474" r="25"/>
+    <circle cx="912" cy="493" r="28"/><circle cx="944" cy="482" r="27"/><circle cx="976" cy="490" r="29"/>
+  </g>
+  <g fill="#79896F">
+    <circle cx="338" cy="445" r="23"/><circle cx="368" cy="436" r="25"/><circle cx="399" cy="443" r="24"/>
+    <circle cx="444" cy="445" r="24"/><circle cx="685" cy="437" r="21"/><circle cx="716" cy="431" r="22"/>
+    <circle cx="946" cy="465" r="20"/><circle cx="972" cy="460" r="22"/>
+  </g>
+</g>
+
+<g id="cypress-left">
+  <path d="M386 442 C369 402 372 328 380 264 C387 205 399 153 413 120
+           C429 163 437 218 442 269 C448 333 448 397 427 444Z" fill="#173D43"/>
+  <path d="M403 434 C393 388 398 315 403 251 C407 204 410 166 414 137
+           C420 189 424 246 426 297 C428 350 426 396 421 434Z" fill="#2F665D" opacity=".78"/>
+</g>
+
+<g id="cypress-right">
+  <path d="M866 464 C851 430 854 370 860 319 C866 271 875 229 886 202
+           C899 236 905 278 909 322 C914 372 913 425 897 466Z" fill="#173D43"/>
+  <path d="M881 457 C874 420 878 367 882 321 C885 284 888 251 890 229
+           C894 271 897 313 898 355 C900 398 899 432 895 458Z" fill="#2F665D" opacity=".78"/>
+</g>
+
+<g id="olive-tree">
+  <path d="M988 492 C991 457 993 426 996 399 C999 374 1003 354 1007 338
+           C1012 358 1015 380 1017 404 C1019 429 1018 458 1017 492Z" fill="#70483F"/>
+  <path d="M1004 418 C979 392 959 375 932 364
+           M1009 395 C1031 373 1055 359 1083 351
+           M1008 382 C987 357 972 338 961 318
+           M1015 385 C1032 362 1047 341 1059 320"
+        fill="none" stroke="#70483F" stroke-width="10" stroke-linecap="round"/>
+  <g fill="#587360">
+    <circle cx="948" cy="345" r="35"/><circle cx="980" cy="330" r="39"/><circle cx="1015" cy="333" r="41"/>
+    <circle cx="1052" cy="347" r="37"/><circle cx="1070" cy="372" r="30"/><circle cx="925" cy="373" r="28"/>
+  </g>
+  <g fill="#87956F">
+    <circle cx="960" cy="330" r="23"/><circle cx="994" cy="317" r="26"/><circle cx="1029" cy="333" r="25"/>
+    <circle cx="1052" cy="358" r="22"/>
+  </g>
+</g>
+
+<g id="buildings">
+  <g id="building-left">
+    <rect x="470" y="365" width="132" height="96" fill="#F0E4DB"/>
+    <rect x="526" y="365" width="76" height="96" fill="#F7EEE8"/>
+    <path d="M458 367 L525 312 L613 367Z" fill="#A86E56"/>
+    <path d="M469 365 L526 321 L603 365Z" fill="#C77B59"/>
+    <rect x="492" y="392" width="22" height="40" rx="2" fill="#2D4F5C"/>
+    <rect x="550" y="386" width="29" height="75" rx="2" fill="#315563"/>
+  </g>
+
+  <g id="building-center">
+    <rect x="595" y="320" width="120" height="141" fill="#F4E8DF"/>
+    <path d="M585 323 L653 267 L728 323Z" fill="#A86E56"/>
+    <path d="M596 321 L654 277 L718 321Z" fill="#C77B59"/>
+    <rect x="619" y="350" width="22" height="40" rx="2" fill="#2D4F5C"/>
+    <rect x="668" y="350" width="22" height="40" rx="2" fill="#2D4F5C"/>
+    <rect x="643" y="404" width="29" height="57" rx="2" fill="#315563"/>
+  </g>
+
+  <g id="building-right">
+    <rect x="717" y="377" width="104" height="84" fill="#EFE2D7"/>
+    <path d="M707 379 L760 337 L830 379Z" fill="#A86E56"/>
+    <path d="M716 377 L761 344 L821 377Z" fill="#C77B59"/>
+    <rect x="739" y="399" width="20" height="36" rx="2" fill="#2D4F5C"/>
+    <rect x="782" y="397" width="22" height="64" rx="2" fill="#315563"/>
+  </g>
+</g>
+
+<g id="terrace">
+  <path d="M452 455 H840 V510 C795 519 739 524 678 524 C593 524 516 515 452 500Z" fill="#E2C4B1"/>
+  <g stroke="#F4DED1" stroke-width="3">
+    <line x1="452" y1="475" x2="840" y2="475"/>
+    <line x1="452" y1="495" x2="840" y2="495"/>
+    <line x1="492" y1="455" x2="492" y2="508"/>
+    <line x1="540" y1="455" x2="540" y2="514"/>
+    <line x1="590" y1="455" x2="590" y2="520"/>
+    <line x1="640" y1="455" x2="640" y2="523"/>
+    <line x1="692" y1="455" x2="692" y2="523"/>
+    <line x1="744" y1="455" x2="744" y2="521"/>
+    <line x1="795" y1="455" x2="795" y2="515"/>
+  </g>
+</g>
+
+<g id="front-shrubs">
+  <g fill="#294F4D">
+    <circle cx="435" cy="525" r="24"/><circle cx="463" cy="514" r="28"/><circle cx="493" cy="518" r="27"/>
+    <circle cx="523" cy="526" r="25"/><circle cx="555" cy="518" r="23"/>
+    <circle cx="805" cy="519" r="22"/><circle cx="832" cy="512" r="24"/><circle cx="858" cy="521" r="21"/>
+  </g>
+  <g fill="#5D7764">
+    <circle cx="576" cy="507" r="20"/><circle cx="602" cy="503" r="22"/><circle cx="628" cy="509" r="20"/>
+    <circle cx="883" cy="516" r="19"/><circle cx="905" cy="510" r="21"/>
+  </g>
+</g>
+
+<g id="dock">
+  <rect x="818" y="575" width="205" height="15" rx="3" fill="#765047"/>
+  <rect x="836" y="556" width="11" height="67" rx="2" fill="#68453F"/>
+  <rect x="895" y="553" width="11" height="75" rx="2" fill="#68453F"/>
+  <rect x="971" y="557" width="11" height="69" rx="2" fill="#68453F"/>
+  <rect x="818" y="575" width="205" height="5" fill="#A76D55" opacity=".88"/>
+  <g opacity=".22" fill="#27474D">
+    <rect x="836" y="622" width="11" height="33" rx="2"/>
+    <rect x="895" y="628" width="11" height="28" rx="2"/>
+    <rect x="971" y="626" width="11" height="28" rx="2"/>
+  </g>
+</g>
+
+<g id="reflections" fill="#D3E0E0" opacity=".32">
+  <path d="M205 644 H398 L362 657 H240Z"/>
+  <path d="M430 653 H700 L657 666 H472Z"/>
+  <path d="M825 642 H1035 L1004 654 H856Z"/>
+</g>
+</svg>

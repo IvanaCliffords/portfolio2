@@ -1,0 +1,13 @@
+.palm-transition {
+    display: block;
+  
+    width: auto;
+    height: 101vh;
+  
+    max-width: none;
+  
+    overflow: visible;
+  
+    pointer-events: none;
+    user-select: none;
+  }

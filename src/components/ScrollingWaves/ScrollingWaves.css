@@ -1,0 +1,99 @@
+.scrolling-waves {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: visible;
+
+  pointer-events: none;
+}
+
+
+.wave {
+  position: absolute;
+
+  left: -30%;
+
+  width: 160%;
+  height: 60%;
+
+  will-change: transform;
+}
+
+
+.wave svg {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+
+/* ==================================
+   LIGHT / TOP WAVE
+
+   Strongest taper.
+================================== */
+
+.wave--1 {
+  bottom: 42%;
+
+  color: #a6b7b9;
+
+}
+
+
+/* ==================================
+   SECOND WAVE
+
+   Partial taper.
+================================== */
+
+.wave--2 {
+  bottom: 28%;
+
+  color: #6e8188;
+
+  opacity: 0.85;
+}
+
+
+/* ==================================
+   THIRD WAVE
+
+   Only a light taper.
+================================== */
+
+.wave--3 {
+  bottom: 14%;
+
+  color: #37484d;
+
+  opacity: 0.92;
+}
+
+
+/* ==================================
+   DARK BASE
+
+   Important:
+   this one does NOT taper to zero.
+
+   It forms a continuous ocean floor so
+   the pink background cannot show between
+   all four wave layers.
+================================== */
+
+.wave--4 {
+  bottom: 0;
+
+  color: #181e27;
+}
+
+@media (max-width: 650px) {
+  .wave {
+    left: -55%;
+
+    width: 205%;
+  }
+}

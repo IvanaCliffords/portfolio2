@@ -1,0 +1,579 @@
+.submarine-journey {
+  position: relative;
+
+  width: 100%;
+  height: 101svh;
+
+  overflow: hidden;
+
+  background: #181e27;
+
+  isolation: isolate;
+}
+
+/* ==================================
+     LIGHTER WATER
+  ================================== */
+
+.journey-light-water {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
+  background: linear-gradient(
+    to bottom,
+    #81989c 0%,
+    #70888e 16%,
+    #5d757b 32%,
+    #465e65 50%,
+    #31454d 70%,
+    #181e27 100%
+  );
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  will-change: opacity;
+}
+
+/* ==================================
+     SKY
+  
+     Only appears during the very
+     final approach to the surface.
+  ================================== */
+
+/* ==================================
+   SKY
+================================== */
+
+.journey-sky {
+    position: absolute;
+  
+    top: 0;
+    left: 0;
+  
+    z-index: 2;
+  
+    width: 100%;
+    height: 52vh;
+  
+    background: linear-gradient(
+      to bottom,
+      #f4dfd8 0%,
+      #efd9d1 58%,
+      #d8c9c3 100%
+    );
+  
+    /*
+     * Sky is fully opaque.
+     * GSAP controls its position/visibility,
+     * NOT its opacity.
+     */
+    opacity: 1;
+  
+    pointer-events: none;
+  
+    will-change: transform;
+  }
+/* ==================================
+     AMBIENT BUBBLES
+  ================================== */
+
+.journey-ambient-bubbles {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 3;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+.journey-bubble {
+  position: absolute;
+
+  display: block;
+
+  border: 1px solid rgba(244, 223, 216, 0.28);
+
+  border-radius: 50%;
+
+  background: rgba(244, 223, 216, 0.025);
+
+  box-shadow: inset 1px 1px 3px rgba(244, 223, 216, 0.12);
+
+  animation: journeyBubbleFloat 7s ease-in-out infinite;
+
+  opacity: 0.55;
+}
+
+@keyframes journeyBubbleFloat {
+  0% {
+    transform: translate3d(0, 20px, 0) scale(0.85);
+
+    opacity: 0.25;
+  }
+
+  50% {
+    transform: translate3d(8px, -50px, 0) scale(1);
+
+    opacity: 0.65;
+  }
+
+  100% {
+    transform: translate3d(-5px, -110px, 0) scale(0.9);
+
+    opacity: 0;
+  }
+}
+
+/* ==================================
+     SEA FLOOR
+  ================================== */
+
+.journey-seafloor,
+.journey-seafloor-foreground {
+  position: absolute;
+
+  left: -10%;
+  bottom: 0;
+
+  width: 120%;
+  height: 34vh;
+
+  pointer-events: none;
+
+  will-change: transform;
+}
+
+.journey-seafloor {
+  z-index: 5;
+
+  opacity: 0.82;
+}
+
+.journey-seafloor-foreground {
+  z-index: 8;
+
+  height: 27vh;
+}
+
+/* ==================================
+     FLOOR SHAPES
+  ================================== */
+
+.journey-ground {
+  position: absolute;
+
+  left: 0;
+  bottom: -5vh;
+
+  width: 100%;
+}
+
+.journey-ground--back {
+  height: 24vh;
+
+  background: #252f38;
+
+  clip-path: polygon(
+    0% 45%,
+    8% 38%,
+    16% 44%,
+    25% 29%,
+    34% 39%,
+    44% 28%,
+    55% 42%,
+    66% 31%,
+    77% 39%,
+    88% 27%,
+    100% 38%,
+    100% 100%,
+    0% 100%
+  );
+}
+
+.journey-ground--front {
+  height: 18vh;
+
+  background: #111820;
+
+  clip-path: polygon(
+    0% 52%,
+    12% 40%,
+    22% 47%,
+    31% 33%,
+    43% 48%,
+    55% 34%,
+    67% 46%,
+    80% 36%,
+    91% 49%,
+    100% 41%,
+    100% 100%,
+    0% 100%
+  );
+}
+
+/* ==================================
+     PLANTS
+  ================================== */
+
+.journey-plant {
+  position: absolute;
+
+  display: block;
+
+  height: auto;
+
+  user-select: none;
+}
+
+.journey-seaweed {
+  width: clamp(80px, 9vw, 150px);
+}
+
+.journey-coral {
+  width: clamp(90px, 10vw, 165px);
+}
+
+.journey-seaweed--1 {
+  left: 8%;
+  bottom: 7vh;
+
+  opacity: 0.55;
+
+  transform: rotate(-4deg);
+}
+
+.journey-coral--1 {
+  left: 31%;
+  bottom: 4vh;
+
+  opacity: 0.5;
+}
+
+.journey-seaweed--2 {
+  right: 23%;
+  bottom: 7vh;
+
+  opacity: 0.5;
+
+  transform: scaleX(-1) rotate(-3deg);
+}
+
+.journey-coral--2 {
+  right: 5%;
+  bottom: 4vh;
+
+  opacity: 0.45;
+
+  transform: scale(0.85);
+}
+
+.journey-seaweed--3 {
+  left: 17%;
+  bottom: 1vh;
+
+  width: clamp(110px, 12vw, 190px);
+
+  opacity: 0.72;
+}
+
+.journey-coral--3 {
+  right: 13%;
+  bottom: 1vh;
+
+  width: clamp(120px, 13vw, 205px);
+
+  opacity: 0.7;
+}
+
+/* ==================================
+     SUBMARINE
+  ================================== */
+
+.journey-submarine {
+  position: absolute;
+
+  left: 7vw;
+  bottom: 21vh;
+
+  z-index: 20;
+
+  width: clamp(180px, 19vw, 330px);
+
+  height: auto;
+
+  display: block;
+
+  pointer-events: none;
+
+  user-select: none;
+
+  will-change: transform;
+}
+
+/* ==================================
+     SUBMARINE BUBBLE TRAIL
+  ================================== */
+
+.journey-submarine-bubbles {
+  position: absolute;
+
+  left: 4vw;
+  bottom: 27vh;
+
+  z-index: 18;
+
+  width: 100px;
+  height: 90px;
+
+  pointer-events: none;
+
+  will-change: transform;
+}
+
+.journey-submarine-bubbles span {
+  position: absolute;
+
+  display: block;
+
+  border: 1px solid rgba(244, 223, 216, 0.35);
+
+  border-radius: 50%;
+
+  background: rgba(244, 223, 216, 0.035);
+}
+
+.journey-submarine-bubbles span:nth-child(1) {
+  left: 58px;
+  top: 49px;
+
+  width: 8px;
+  height: 8px;
+}
+
+.journey-submarine-bubbles span:nth-child(2) {
+  left: 39px;
+  top: 34px;
+
+  width: 12px;
+  height: 12px;
+}
+
+.journey-submarine-bubbles span:nth-child(3) {
+  left: 21px;
+  top: 14px;
+
+  width: 7px;
+  height: 7px;
+}
+
+.journey-submarine-bubbles span:nth-child(4) {
+  left: 5px;
+  top: 33px;
+
+  width: 5px;
+  height: 5px;
+}
+
+.journey-submarine-bubbles span:nth-child(5) {
+  left: 29px;
+  top: 0;
+
+  width: 4px;
+  height: 4px;
+}
+
+/* ==================================
+     SURFACE GLOW
+  ================================== */
+
+.journey-surface-glow {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  z-index: 10;
+
+  width: 100%;
+  height: 52vh;
+
+  background: radial-gradient(
+    ellipse at 72% -8%,
+    rgba(244, 223, 216, 0.28) 0%,
+    rgba(244, 223, 216, 0.1) 28%,
+    transparent 68%
+  );
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  will-change: opacity;
+}
+
+/* ==================================
+     SURFACE
+  
+     This now reads as actual water,
+     not a single pale stripe.
+  ================================== */
+
+/* ==================================
+   SURFACE
+================================== */
+
+.journey-surface {
+    position: absolute;
+  
+    top: 0;
+    left: 0;
+  
+    z-index: 30;
+  
+    width: 100%;
+    height: 54vh;
+  
+    pointer-events: none;
+  
+    will-change: transform;
+  }
+  
+ 
+
+
+/* ==================================
+     TABLET
+  ================================== */
+
+@media (max-width: 900px) {
+  .journey-submarine {
+    left: 4vw;
+
+    bottom: 20vh;
+
+    width: clamp(165px, 25vw, 260px);
+  }
+
+  .journey-seafloor {
+    height: 30vh;
+  }
+
+  .journey-seafloor-foreground {
+    height: 24vh;
+  }
+
+  .journey-submarine-bubbles {
+    left: 1vw;
+  }
+
+  .journey-sky {
+    height: 50vh;
+  }
+
+  .journey-surface {
+    height: 52vh;
+  }
+}
+
+/* ==================================
+     MOBILE
+  ================================== */
+
+@media (max-width: 650px) {
+  .submarine-journey {
+    min-height: 100svh;
+  }
+
+  .journey-submarine {
+    left: -1rem;
+    bottom: 20vh;
+
+    width: clamp(145px, 42vw, 190px);
+  }
+
+  .journey-submarine-bubbles {
+    left: -2rem;
+
+    bottom: 26vh;
+
+    transform: scale(0.75);
+  }
+
+  .journey-seafloor {
+    left: -20%;
+
+    width: 140%;
+
+    height: 27vh;
+  }
+
+  .journey-seafloor-foreground {
+    left: -20%;
+
+    width: 140%;
+
+    height: 22vh;
+  }
+
+  .journey-seaweed {
+    width: 80px;
+  }
+
+  .journey-coral {
+    width: 90px;
+  }
+
+  .journey-seaweed--3 {
+    width: 105px;
+  }
+
+  .journey-coral--3 {
+    width: 115px;
+  }
+
+  .journey-sky {
+    height: 48vh;
+  }
+
+  .journey-surface {
+    height: 50vh;
+  }
+
+  .journey-surface-line--back {
+    height: 3.8vh;
+  }
+
+  .journey-surface-line--front {
+    height: 3.4vh;
+  }
+}
+
+/* ==================================
+     REDUCED MOTION
+  ================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-bubble {
+    animation: none;
+  }
+
+  .journey-submarine,
+  .journey-submarine-bubbles,
+  .journey-seafloor,
+  .journey-seafloor-foreground,
+  .journey-light-water,
+  .journey-surface,
+  .journey-surface-glow,
+  .journey-sky {
+    will-change: auto;
+  }
+}

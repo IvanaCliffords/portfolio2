@@ -1,0 +1,12 @@
+.lighthouse {
+  height: 70vh !important;
+  width: auto !important;
+}
+
+.lighthouse-wrap svg {
+  display: block;
+  width: auto;
+  height: 60vh !important;
+  position: absolute !important;
+  bottom: -8% !important;
+}
